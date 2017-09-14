@@ -1,0 +1,180 @@
+﻿<Window x:Class="Citac2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Probojni Napon" Height="2500" Width="1453" Loaded="Window_Loaded" FontSize="11" FontFamily="Tahoma" WindowState="Maximized">
+    <ScrollViewer HorizontalScrollBarVisibility="Visible">
+        <Grid Name="grid1">
+            <Image Width="176" Height="108"   HorizontalAlignment="Left" Margin="1065,8,0,0" Name="image1" Source="Pictures/iso.png" Stretch="Fill" VerticalAlignment="Top" />
+            <Image  Width="210" Height="87"   HorizontalAlignment="Left" Margin="114,20,0,0" Name="image2" Source="Pictures/koncar.png" Stretch="Fill" VerticalAlignment="Top" />
+
+            <Button Content="PRINT" Height="23" HorizontalAlignment="Left" Margin="891,231,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+            <TextBox BorderThickness="0" FontSize="18" HorizontalAlignment="Left" Margin="381,21,0,0" FontWeight="Bold" Name="TT1" Text="KONČAR - DISTRIBUTIVNI I SPECIJALNI TRANSFORMATORI d.d." VerticalAlignment="Top" />
+            <TextBox BorderThickness="0" FontSize="18"  HorizontalAlignment="Left" Margin="381,43,0,0" Name="TT2" Text="Address:  Josipa Mokrovića 8, P.O. Box 100, HR-10090 Zagreb, Croatia" VerticalAlignment="Top" />
+            <TextBox BorderThickness="0" FontSize="18"  HorizontalAlignment="Left" Margin="381,67,0,0" Name="TT3" Text="Telephone: (+385 1)  3783 777,  Fax: (+ 385 1)  3794 051" VerticalAlignment="Top" />
+            <TextBox BorderThickness="0" FontSize="18"  HorizontalAlignment="Left" Margin="383,90,0,0" Name="TT4" Text="E-mail:  info@koncar-dst.hr,  Internet:  www.koncar-dst.hr" VerticalAlignment="Top" />
+            <TextBox BorderThickness="0" FontSize="26" FontWeight="Bold"  HorizontalAlignment="Left" Margin="271,168,0,0" Name="TT5" Text="ISPITNI IZVJEŠTAJ br." VerticalAlignment="Top" />
+
+            <TextBox BorderThickness="0" FontSize="26" FontWeight="Bold"  HorizontalAlignment="Left" Margin="305,202,0,0" Name="TT6" Text="TEST REPORT No. " VerticalAlignment="Top" />
+            <TextBox BorderThickness="0" FontSize="16"  HorizontalAlignment="Left" Margin="316,235,0,0" Name="TT6a" Text="acc. to HRN EN 10204 2.2" VerticalAlignment="Top" />
+
+            <TextBox BorderThickness="0" FontSize="26" FontWeight="Bold"  HorizontalAlignment="Left" Margin="210,293,0,0" Name="TT7" Text="ISPITIVANJE PROBOJNOG NAPONA TRANSFORMATORSKOG ULJA" VerticalAlignment="Top" />
+            <TextBox BorderThickness="0" FontWeight="Bold" FontSize="26"  HorizontalAlignment="Left" Margin="236,329,0,0" Name="TT8" Text="BREAKDOWN VOLTAGE TEST OF TRANSFORMER OIL" VerticalAlignment="Top" />
+            <TextBox BorderThickness="0" FontSize="22" FontWeight="Bold" HorizontalAlignment="Left" Margin="160,422,0,0" Name="TT9" Text="PODACI O UZORKU  I TRANSFORMATORU / SAMPLE  AND TRANSFORMER IDENTIFICATION:" VerticalAlignment="Top" />
+            <TextBox BorderThickness="0" FontSize="22" HorizontalAlignment="Left" Margin="201,477,0,0" Name="TT10" Text="Naručitelj / Ordered by:" VerticalAlignment="Top" />
+            <TextBox FontSize="22" FontWeight="Bold"  HorizontalAlignment="Left" Margin="603,475,0,0" Name="T2" Text="BWSC" VerticalAlignment="Top" BorderThickness="0" KeyDown="T1_KeyDown" />
+            <TextBox BorderThickness="0" FontSize="22"  HorizontalAlignment="Left" Margin="201,510,0,0" Name="TT11" Text="Tip transformatora / Transformer type:" VerticalAlignment="Top" />
+            <TextBox FontSize="22" FontWeight="Bold"  HorizontalAlignment="Left" Margin="603,508,0,0" Name="T3" Text="TRN 50000-145/B" VerticalAlignment="Top" BorderThickness="0" KeyDown="T1_KeyDown" />
+            <TextBox BorderThickness="0"  FontSize="22" HorizontalAlignment="Left" Margin="201,544,0,0" Name="TT13" Text="Tvornički broj / Serial No.:" VerticalAlignment="Top" />
+            <TextBox  FontSize="22" FontWeight="Bold"  HorizontalAlignment="Left" Margin="604,542,0,0" Name="T4" Text="462781" VerticalAlignment="Top" BorderThickness="0" KeyDown="T1_KeyDown" />
+            <TextBox BorderThickness="0"  FontSize="22"  HorizontalAlignment="Left" Margin="201,579,0,0" Name="TT14" Text="Vrsta ulja / Type of oil:  " VerticalAlignment="Top" />
+            <TextBox  FontSize="22" FontWeight="Bold"  HorizontalAlignment="Left" Margin="605,577,0,0" Name="T5" Text="NYTRO 4000X" VerticalAlignment="Top" BorderThickness="0" KeyDown="T1_KeyDown" />
+            <TextBox BorderThickness="0"  FontSize="22" FontWeight="Bold"  HorizontalAlignment="Left" Margin="160,685,0,0" Name="TT16" Text="METODA I REZULTATI ISPITIVANJA / TEST METHOD AND RESULTS OF ANALYSIS:" VerticalAlignment="Top" />
+            <TextBox BorderThickness="0"  FontSize="22" FontWeight="Bold"  HorizontalAlignment="Left" Margin="160,1429,0,0" Name="TT17" Text="INTERPRETACIJA REZULTATA / INTERPRETATION OF RESULTS:" VerticalAlignment="Top" />
+            <RichTextBox  FontSize="22" BorderThickness="0" Height="509" HorizontalAlignment="Left" Margin="201,1458,0,0" Name="RichT" Width="952"  VerticalAlignment="Top" KeyDown="T1_KeyDown" />
+            <TextBox  FontSize="16" HorizontalAlignment="Left" Margin="912,143,0,0" Name="FileNameTextBox" VerticalAlignment="Top" Width="120" />
+            <Button Content="Vadi" Height="23" HorizontalAlignment="Left" Margin="831,141,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
+            <TextBlock  FontSize="22" Height="670" HorizontalAlignment="Left" Margin="201,689,0,0" Name="Ubacit"  VerticalAlignment="Top" />
+            <TextBlock  FontSize="22" Height="740" HorizontalAlignment="Left" Margin="518,619,0,0" Name="Ubacit2"   VerticalAlignment="Top" />
+
+            <TextBox FontWeight="Bold" Text="003/13" TextAlignment="Center" FontSize="34" Height="52" HorizontalAlignment="Left" Margin="616,172,0,0" BorderThickness="0" Name="T1"  VerticalAlignment="Top" KeyDown="T1_KeyDown"  />
+
+
+            <Grid Visibility="Visible" Height="148" HorizontalAlignment="Left" Margin="201,1562,0,0" Name="grid3" VerticalAlignment="Top" Width="600" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Width="0.4*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.2*"  ></ColumnDefinition>
+                    <ColumnDefinition Width="0.2*"  ></ColumnDefinition>
+                    <ColumnDefinition Width="0.2*"  ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" ></RowDefinition>
+                    <RowDefinition Height="Auto" ></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border BorderThickness="1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Grid.RowSpan="4" Padding="0" BorderBrush="Gray" Margin="0,0,0,0"></Border>
+                <Border BorderThickness="1" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="4" Padding="0" BorderBrush="Gray" Margin="0,0,0,0"></Border>
+                <Border BorderThickness="1" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="1" Padding="0" BorderBrush="Gray" Margin="0,0,0,0"></Border>
+                <Border BorderThickness="1" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="1" Padding="0" BorderBrush="Gray" Margin="0,-1,0,0"></Border>
+
+
+                <TextBox BorderThickness="0"  Height="26" FontSize="18"  TextAlignment="Center" Margin="1" Grid.Column="0" Grid.Row="1"  Name="TT18" Text="Property" />
+                <TextBox BorderThickness="0" Height="26" FontSize="18"  TextAlignment="Center" Margin="1" Grid.Column="0" Grid.Row="2"  Name="TT19" Text="Breakdown voltage / kV" />
+                <TextBox BorderThickness="0" Height="26" FontSize="18" TextAlignment="Center" Margin="4" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3"  Name="TT20" Text="Highest voltage for equipment /kV" />
+                <TextBox  FontSize="18"  TextAlignment="Center" Margin="4" Grid.Column="1" Grid.Row="1"  Name="T7" Text="&lt;72,5" BorderThickness="0" KeyDown="T1_KeyDown" />
+                <TextBox  FontSize="18"  TextAlignment="Center" Margin="4" Grid.Column="2" Grid.Row="1"  Name="T8" Text="72,5 to 170" BorderThickness="0" KeyDown="T1_KeyDown" />
+                <TextBox  FontSize="18"  TextAlignment="Center" Margin="4" Grid.Column="3" Grid.Row="1"  Name="T9" Text="&gt;170" BorderThickness="0" KeyDown="T1_KeyDown" />
+                <TextBox  FontSize="18"  TextAlignment="Center"  Margin="4" Grid.Column="1" Grid.Row="2"  Name="T10" Text="&gt;55" BorderThickness="0" FontWeight="Bold" KeyDown="T1_KeyDown" />
+                <TextBox  FontSize="18"  TextAlignment="Center" Margin="4" Grid.Column="2" Grid.Row="2"  Name="T11" Text="&gt;60" BorderThickness="0" FontWeight="Bold" KeyDown="T1_KeyDown" />
+                <TextBox  FontSize="18"  TextAlignment="Center" Margin="4" Grid.Column="3" Grid.Row="2"  Name="T12" Text="&gt;60" BorderThickness="0" FontWeight="Bold" KeyDown="T1_KeyDown" />
+                <TextBox Visibility="Hidden" FontSize="18" Height="0"  TextAlignment="Center" Margin="0" Grid.Column="0" Grid.Row="3"  Name="T18" Text="Text1" BorderThickness="0"  KeyDown="T1_KeyDown" />
+                <TextBox Visibility="Hidden" FontSize="18" Height="0"  TextAlignment="Center" Margin="0" Grid.Column="1" Grid.Row="3"  Name="T19" Text="Text2" BorderThickness="0" FontWeight="Bold" KeyDown="T1_KeyDown" />
+                <TextBox Visibility="Hidden" FontSize="18" Height="0"  TextAlignment="Center" Margin="0" Grid.Column="2" Grid.Row="3"  Name="T20" Text="Text3" BorderThickness="0" FontWeight="Bold" KeyDown="T1_KeyDown" />
+                <TextBox Visibility="Hidden" FontSize="18" Height="0"  TextAlignment="Center" Margin="0" Grid.Column="3" Grid.Row="3"  Name="T21" Text="Text4" BorderThickness="0" FontWeight="Bold" KeyDown="T1_KeyDown" />
+
+            </Grid>
+
+
+
+            <Grid Height="117" HorizontalAlignment="Left" Margin="160,0,0,92" Name="grid2" VerticalAlignment="Bottom" Width="1040" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Width="0.3*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.3*"  ></ColumnDefinition>
+                    <ColumnDefinition Width="0.4*"  ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" ></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Border BorderThickness="1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Padding="0" BorderBrush="Black" Margin="5,0,0,0"></Border>
+                <Border BorderThickness="1" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="3" Padding="0" BorderBrush="Black" Margin="0,0,0,0"></Border>
+
+
+                <TextBox BorderThickness="0" Height="26" FontSize="18"  TextAlignment="Center" Margin="7,2,2,2" Grid.Column="0" Grid.Row="0"  Name="TT21" Text="Datum / Date:" />
+                <TextBox Height="26" FontSize="18"  BorderThickness="0"  TextAlignment="Center" Margin="7,2,2,2" Grid.Row="1" Name="T14" Text="" KeyDown="T1_KeyDown" />
+                <TextBox BorderThickness="0" Height="26" FontSize="18"  TextAlignment="Center" Margin="7,2,2,2"  Grid.Column="0" Grid.Row="2" Name="TT22" Text=""  />
+                <TextBox BorderThickness="0" Height="26" FontSize="18"   TextAlignment="Center" Margin="2" Grid.Column="1" Name="TT23" Text="Ispitao / Tested by:" />
+                <TextBox FontSize="18"  BorderThickness="0" Height="22"  TextAlignment="Center" Margin="2"  Grid.Column="1" Grid.Row="1" Name="T15" Text="Ivanka Radić, MSc.Chem. E." KeyDown="T1_KeyDown" />
+                <TextBox BorderThickness="0" Height="26" FontSize="18" TextAlignment="Center" Margin="2"  Grid.Column="1" Grid.Row="2" Name="TT24" Text=""  />
+                <TextBox BorderThickness="0" Height="26" FontSize="18"   TextAlignment="Center" Margin="2" Grid.Column="2" Name="TT25" Text="Odobrio / Approved by:" />
+                <TextBox BorderThickness="0" Height="26" FontSize="18" TextAlignment="Center" Margin="2"  Grid.Column="2" Grid.Row="1" Name="T16" Text="Renata Jurišić, MSc.Chem. E." KeyDown="T1_KeyDown" />
+                <TextBox BorderThickness="0" Height="26" FontSize="18" TextAlignment="Center" Margin="2"  Grid.Column="2" Grid.Row="2" Name="T17" Text="" KeyDown="T1_KeyDown" />
+
+
+
+
+            </Grid>
+
+            <Grid Height="38.039"  HorizontalAlignment="Left" Margin="136,0,0,44" VerticalAlignment="Bottom" Width="220.04" >
+                <Grid.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </Grid.LayoutTransform>
+                <TextBox  Height="18" FontSize="12" TextAlignment="Center"  Margin="0,0,0,0"   Name="T13" Text="OB-0272 2013-04-10" BorderThickness="0" KeyDown="T1_KeyDown" />
+
+            </Grid>
+
+
+
+            <TextBox BorderThickness="0"  FontSize="16" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="170,0,0,92"   Name="TT26" Text="Laboratorij Ulazne kontrole / Laboratory of Incoming Control : tel. +385 1 3783 829 , e-mail: ivanka.radic@koncar-dst.hr"  />
+            <ComboBox Height="23" HorizontalAlignment="Left" Margin="912,172,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120"  />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBox26cp" Text="{Binding ElementName=comboBox1, Path=Text}" TextChanged="textBox1_TextChanged"   VerticalAlignment="Top" Visibility="Hidden" Width="120" />
+            <TextBox BorderThickness="0" FontSize="22" HorizontalAlignment="Left" Margin="201,614,0,0" Name="TT15" Text="Napomena / Note:  " VerticalAlignment="Top" />
+            <TextBox BorderThickness="0" FontSize="22" FontWeight="Bold" HorizontalAlignment="Left" Margin="605,612,0,0" Name="T6" Text="" VerticalAlignment="Top" KeyDown="T1_KeyDown" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="912,200,0,0" Name="textBox3" VerticalAlignment="Top" Width="120" KeyDown="T1_KeyDown" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="843,204,0,0" Name="textBlock21" Text="Novi datum:" VerticalAlignment="Top" />
+            <Button Content="SPREMI" Click="Spremi_click" Height="23" HorizontalAlignment="Left" Margin="1080,234,0,0" Name="button3" VerticalAlignment="Top" Width="75" />
+            <Button Content="OTVORI" Click="Otvori_Click" Height="23" HorizontalAlignment="Left" Margin="1083,176,0,0" Name="button4" VerticalAlignment="Top" Width="65" />
+            <ComboBox Height="23" HorizontalAlignment="Left" Margin="1080,145,0,0" Name="comboBox2" VerticalAlignment="Top" Width="147" />
+            <ComboBox Height="23" HorizontalAlignment="Left" Margin="1240,145,0,0" Name="comboBox2a" VerticalAlignment="Top" Width="147" />
+            <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBox26cd" Text="{Binding ElementName=comboBox2, Path=Text}" KeyDown="T1_KeyDown"   VerticalAlignment="Top" Visibility="Hidden" Width="120" />-->
+
+            <TextBox FontSize="16" HorizontalAlignment="Left" Margin="1080,204,0,0" Name="textBox4" VerticalAlignment="Top" Width="120" />
+            <Button Content="OBRIŠI" Height="23" HorizontalAlignment="Left" Margin="1156,176,0,0" Name="button5" VerticalAlignment="Top" Width="68" Click="Obrisi_Click" />
+            <CheckBox Click="C1_Click" FontSize="16" Content="Dodatni red" Height="16" HorizontalAlignment="Left" Margin="68,1668,0,0" Name="C1" VerticalAlignment="Top" />
+            <TextBox BorderThickness="0" FontSize="22" HorizontalAlignment="Left" Margin="201,1365,0,0" Name="T22" Text="  " VerticalAlignment="Top" />
+            <CheckBox Content="Jezik DA/NE" Height="16" HorizontalAlignment="Left" Margin="1206,207,0,0" Name="checkBox1" VerticalAlignment="Top" />
+            <Button  Click="Otvori_Click"  Content="OTVORI" Height="23" HorizontalAlignment="Left" Margin="1242,176,0,0" Name="button4a" VerticalAlignment="Top" Width="65" />
+            <Button  Click="Obrisi_Click" Content="OBRIŠI" Height="23" HorizontalAlignment="Left" Margin="1315,176,0,0" Name="button5a" VerticalAlignment="Top" Width="68" />
+            <!--<Canvas x:Name="canvas"
+
+            MouseDown="Canvas_MouseDown"
+
+            MouseUp="Canvas_MouseUp"
+
+            MouseMove="Canvas_MouseMove" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Height="400" Margin="107,325,0,0">
+
+            <TextBox x:Name="rect2"  Text="222"
+                    FontSize="24"
+                   Canvas.Left="50" Canvas.Top="100"
+
+                   MouseLeftButtonDown="rect2_MouseLeftButtonDown">
+
+                <TextBox.RenderTransform>
+
+                    <TranslateTransform/>
+
+                </TextBox.RenderTransform>
+
+            </TextBox>
+
+            <Rectangle x:Name="rect1" Height="50" Width="50" Fill="Red" MouseLeftButtonDown="rect1_MouseLeftButtonDown">
+
+                <Rectangle.RenderTransform>
+
+                    <TranslateTransform />
+
+                </Rectangle.RenderTransform>
+
+            </Rectangle>
+
+        </Canvas>-->
+
+
+        </Grid>
+    </ScrollViewer>
+
+
+</Window>
